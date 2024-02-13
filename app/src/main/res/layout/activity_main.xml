@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:shadowRadius="30"
+    android:background="@color/light_purple">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#673AB7"
+        android:backgroundTint="#673AB7"
+        android:gravity="center_horizontal"
+        android:text="Pizza Party"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:labelFor="@id/num_attend_edit_text"
+        android:text="Number of people?"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/num_attend_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:inputType="number"
+        android:ems="5"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:labelFor="@id/hungry_radio_group"
+        android:text="How hungry?"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/hungry_radio_group"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/light_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Light"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/medium_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:buttonTint="#673AB7"
+            android:checked="true"
+            android:fontFamily="sans-serif-black"
+            android:text="Medium"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/ravenous_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Ravenous"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/num_pizzas_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Total pizzas: ?"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/calc_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#673AB7"
+        android:onClick="calculateClick"
+        android:shadowRadius="24"
+        android:text="Calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+</LinearLayout>
