@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -11,7 +12,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:shadowRadius="30"
-    android:background="@color/light_purple">
+    android:background="@drawable/pizza_background">
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -21,7 +22,7 @@
         android:background="#673AB7"
         android:backgroundTint="#673AB7"
         android:gravity="center_horizontal"
-        android:text="Pizza Party"
+        android:text="@string/pizza_party"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
@@ -32,8 +33,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:labelFor="@id/num_attend_edit_text"
-        android:text="Number of people?"
-        android:textSize="24sp"
+        android:text="@string/number_of_people"
+        android:textSize="@dimen/label_text_size"
+        android:textColor="#000000"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
@@ -42,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
+        android:buttonTint="#673AB7"
         android:inputType="number"
         android:ems="5"
         android:importantForAutofill="no" />
@@ -52,8 +55,9 @@
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
         android:labelFor="@id/hungry_radio_group"
-        android:text="How hungry?"
-        android:textSize="24sp"
+        android:text="@string/how_hungry"
+        android:textSize="@dimen/label_text_size"
+        android:textColor="#000000"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
@@ -67,8 +71,9 @@
             android:id="@+id/light_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
+            android:buttonTint="#673AB7"
             android:fontFamily="sans-serif-black"
-            android:text="Light"
+            android:text="@string/light"
             tools:ignore="HardcodedText" />
 
         <RadioButton
@@ -78,15 +83,16 @@
             android:buttonTint="#673AB7"
             android:checked="true"
             android:fontFamily="sans-serif-black"
-            android:text="Medium"
+            android:text="@string/medium"
             tools:ignore="HardcodedText" />
 
         <RadioButton
             android:id="@+id/ravenous_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
+            android:buttonTint="#673AB7"
             android:fontFamily="sans-serif-black"
-            android:text="Ravenous"
+            android:text="@string/ravenous"
             tools:ignore="HardcodedText" />
     </RadioGroup>
 
@@ -96,8 +102,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Total pizzas: ?"
-        android:textSize="24sp"
+        android:text="@string/total_pizzas"
+        android:textSize="@dimen/label_text_size"
+        android:textColor="#000000"
+        android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -108,9 +116,8 @@
         android:backgroundTint="#673AB7"
         android:onClick="calculateClick"
         android:shadowRadius="24"
-        android:text="Calculate"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:text="@string/calculate"
         android:textStyle="bold"
+        style="@style/CalcButton"
         tools:ignore="HardcodedText" />
 </LinearLayout>
